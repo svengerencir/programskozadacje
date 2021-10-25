@@ -4,9 +4,12 @@ function zagrade(s) {
   tester = tester.concat(s[0]);
   for (let i = 1; i < s.length; i++) {
     if (
-      (s[i] == ")" && tester[tester.length - 1] != "(") ||
-      (s[i] == "]" && tester[tester.length - 1] != "[") ||
-      (s[i] == "}" && tester[tester.length - 1] != "{")
+      (s[i] == ")" && tester[tester.length - 1] == "[") ||
+      (s[i] == ")" && tester[tester.length - 1] == "{") ||
+      (s[i] == "]" && tester[tester.length - 1] == "(") ||
+      (s[i] == "]" && tester[tester.length - 1] == "{") ||
+      (s[i] == "}" && tester[tester.length - 1] == "(") ||
+      (s[i] == "}" && tester[tester.length - 1] == "[")
     ) {
       return false;
     }
