@@ -7,7 +7,7 @@ function BrisiDuploR(rijec) {
   for (let i = 0; i < rijec.length - 1; i++) {
     for (let j = i + 1; j < rijec.length; j++)
       if (rijec.charAt(i) == rijec.charAt(j)) {
-        rijec = rijec.substr(0, j).concat(rijec.substr(j + 1, rijec.length));
+        rijec = rijec.slice(0, j).concat(rijec.slice(j + 1, rijec.length));
         j -= 1;
       } else break;
   }
