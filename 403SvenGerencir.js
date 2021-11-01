@@ -23,7 +23,7 @@ function zagrade(s) {
       tester = tester.concat(s[i]);
     }
   }
-  return true;
+  return tester.length ? false : true;
 }
 console.log(zagrade("[()]()()"));
 console.log(zagrade("{[((()))]}"));
